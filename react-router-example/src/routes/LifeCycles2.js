@@ -33,8 +33,11 @@ class LifeCycles2 extends Component {
     */
     console.log(nextProps);
     console.log(nextState);
-    if (nextProps.value === 10) return false;
-    return true;
+    if (nextProps.value === 1) return true;
+    if (nextProps.value === 2) return true;
+    if (nextProps.value === 5) return true;
+    if (nextProps.value === 7) return true;
+    return false;
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -46,7 +49,6 @@ class LifeCycles2 extends Component {
   render() {
     return (
       <div>
-        {this.props.missing.something}
         <p>props: {this.props.value}</p>
         <p>state: {this.state.value}</p>
       </div>
